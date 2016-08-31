@@ -49,7 +49,7 @@ export default function configureStore(options) {
     injectMiddleware({
       ...platformDeps,
       engine,
-      fetch: createFetch('http://localhost:3000/v1/api'),
+      fetch: createFetch('http://localhost:3000/api/v1'),
       getUid: () => shortid.generate(),
       now: () => Date.now(),
       thunk,

@@ -15,12 +15,6 @@ export default StyleSheet.create({
     backgroundColor: '#fff',
     flex: 1,
   },
-  itemsList: {
-    flex: 2,
-    marginTop: 2000,
-    borderColor: 'green',
-    borderWidth: 3,
-  },
   mainView: {
     flex: 3,
     flexDirection: 'column',
