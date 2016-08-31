@@ -1,0 +1,13 @@
+// This .babelrc is for react-native
+// https://github.com/facebook/react-native/tree/master/babel-preset
+{
+  "presets": ["react-native"],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-constant-elements",
+        "transform-react-inline-elements"
+      ]
+    }
+  }
+}
