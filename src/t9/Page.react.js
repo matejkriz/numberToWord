@@ -3,6 +3,7 @@ import appStyles from '../app/styles';
 import NavigationBar from 'react-native-navbar'
 import NumberInput from './NumberInput.react';
 import React from 'react';
+import WordList from './WordList.react';
 import {
   StyleSheet,
   Text,
@@ -42,7 +43,7 @@ class Page extends React.Component {
     this.isEmpty = number.length === 0;
 
     const rightButtonConfig = {
-      title: 'Send',
+      title: 'Convert',
       tintColor: this.isEmpty ? 'gray' : '#0076FF',
       handler: () => {
         if(!this.isEmpty)
@@ -51,7 +52,7 @@ class Page extends React.Component {
     };
 
     const titleConfig = {
-      title: 'number to word',
+      title: 'T9',
     };
 
     return (
@@ -68,6 +69,7 @@ class Page extends React.Component {
             onSubmitEditing={this.onSubmitEditing}
           />
         </View>
+        <WordList />
       </View>
     );
   }

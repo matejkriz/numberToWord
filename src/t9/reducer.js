@@ -9,7 +9,7 @@ const InitialState = Record({
 });
 const initialState = new InitialState;
 
-export default function itemsListReducer(state = initialState, action) {
+export default function t9Reducer(state = initialState, action) {
 
   switch (action.type) {
 
@@ -28,11 +28,10 @@ export default function itemsListReducer(state = initialState, action) {
 
     case actions.FETCH_WORD_LIST_SUCCESS:
       {
-        const wordList = List.of(action.payload);
         return state
           .set('isFetching', false)
           .set('error', false)
-          .set('wordList', wordList)
+          .set('wordList', List.of(...action.payload));
       }
 
     case actions.FETCH_WORD_LIST_ERROR:
