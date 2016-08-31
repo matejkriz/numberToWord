@@ -15,6 +15,8 @@ Ways to go beyond the minimal solution could include for example:
 - mobile app in React Native
 - filtering to include only real words based on a suitable word list
 
+![Screenshot](screenshot.png)
+
 ##requirements
 ====
 - [React Native](https://facebook.github.io/react-native/docs/getting-started.html) (v0.32)
