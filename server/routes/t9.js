@@ -4,7 +4,7 @@ var t9 = require('super-t9');
 exports.getWordFromNumber = getWordFromNumber;
 
 // TODO: replace with better dictionary, make it configurable
-t9.setWordList('1000-words', 'csv', '1000-words.csv');
+t9.setWordList('google-words', 'csv', 'google-10000-english-usa.csv');
 
 function getWordFromNumber(req, res, next) {
   if (!req.query.number || req.query.number.length < 1) {
@@ -12,7 +12,7 @@ function getWordFromNumber(req, res, next) {
       .status(400)
       .send('Missing parameter!');
   } else {
-    var matches = t9.getWordsFromNumber(req.query.number, '1000-words');
+    var matches = t9.getWordsFromNumber(req.query.number, 'google-words');
     res.send(matches);
   }
 };
