@@ -16,8 +16,9 @@ export default StyleSheet.create({
     flex: 1,
   },
   mainView: {
-    flex: 3,
-    flexDirection: 'column',
+    flex: 4,
+    flexDirection: 'row',
+    alignItems: 'stretch',
   },
   message: {
     flex: 1,

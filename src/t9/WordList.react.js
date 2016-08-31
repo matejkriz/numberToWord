@@ -19,7 +19,7 @@ class WordList extends React.Component {
     const {isFetching, wordList} = this.props;
     if (isFetching || !wordList.size) {
       return (
-        <View style={appStyles.mainView}>
+        <View style={appStyles.container}>
           <View style={styles.centered}>
             { isFetching &&
               <ActivityIndicator
@@ -38,7 +38,7 @@ class WordList extends React.Component {
 
     return (
       <ScrollView
-        style={appStyles.mainView}
+        style={appStyles.container}
       >
         {wordList.map(word =>
           <View key={word} style={[styles.row, wordList.first() === word && styles.firstRow]}>
@@ -62,7 +62,6 @@ const styles = StyleSheet.create({
   centered: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
     paddingBottom: 40
   },
   row: {

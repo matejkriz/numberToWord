@@ -56,20 +56,22 @@ class Page extends React.Component {
     };
 
     return (
-      <View style={[appStyles.sceneView]}>
+      <View style={appStyles.sceneView}>
         <NavigationBar
           title={titleConfig}
           rightButton={rightButtonConfig}
           tintColor={'whitesmoke'}
         />
-        <View style={[appStyles.mainView]}>
+        <View style={appStyles.container}>
           <NumberInput
             value={number}
             onChangeText={this.onChangeText}
             onSubmitEditing={this.onSubmitEditing}
           />
         </View>
-        <WordList />
+        <View style={appStyles.mainView}>
+          <WordList />
+        </View>
       </View>
     );
   }
