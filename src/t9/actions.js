@@ -23,7 +23,7 @@ export function getWords(number) {
         .then(apiUtils.checkStatus)
         .then(apiUtils.parseJSON)
         .then(data => {
-          return data;
+          return data || [];
         })
         .catch(apiUtils.catchError)
     }
