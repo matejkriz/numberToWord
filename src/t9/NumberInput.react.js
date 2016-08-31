@@ -30,6 +30,7 @@ export default class NumberInput extends React.Component {
           onChangeText={onChangeText}
           onSubmitEditing={onSubmitEditing}
           value={value}
+          keyboardType={'phone-pad'}
         />
       </View>
 
